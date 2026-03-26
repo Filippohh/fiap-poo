@@ -1,6 +1,5 @@
 package br.com.fiapride.main;
 
-// Importamos a classe Mochila
 import br.com.fiapride.model.Mochila;
 
 public class SistemaPrincipal {
@@ -9,13 +8,14 @@ public class SistemaPrincipal {
 
         System.out.println("=== Sistema de Mochilas ===");
 
-        // Criando mochila 1
+        // AGORA O OBJETO SÓ NASCE COM DADOS (SEM new vazio!)
+
         Mochila mochila1 = new Mochila("Verde", "Enzo");
 
         System.out.println("\nAdição de peso na mochila 1");
         mochila1.adicionarPeso(3.5);
 
-        System.out.println("\nRemoção de peso na mochila 1");
+        System.out.println("\nRemoção de peso da mochila 1");
         mochila1.removerPeso(1.0);
 
         System.out.println("\nTentando remover peso inválido");
@@ -27,7 +27,7 @@ public class SistemaPrincipal {
         System.out.println("Peso atual: " + mochila1.getPesoNaMochila() + " kg");
 
 
-        // Criando mochila 2
+        // Mochila 2
         Mochila mochila2 = new Mochila("Preta", "Maria");
 
         System.out.println("\nAdição de peso na mochila 2");
@@ -40,6 +40,5 @@ public class SistemaPrincipal {
         System.out.println("Dono: " + mochila2.getDonoDaMochila());
         System.out.println("Cor: " + mochila2.getCor());
         System.out.println("Peso atual: " + mochila2.getPesoNaMochila() + " kg");
-
     }
 }

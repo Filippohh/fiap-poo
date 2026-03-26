@@ -2,15 +2,15 @@ package br.com.fiapride.model;
 
 public class Mochila {
 
-    // ATRIBUTOS PROTEGIDOS (ENCAPSULAMENTO)
+    // ATRIBUTOS (encapsulados)
     private String cor;
     private String donoDaMochila;
     private double pesoNaMochila;
 
-    // CONSTRUTOR
+    // CONSTRUTOR (OBRIGATÓRIO - nascimento do objeto)
     public Mochila(String cor, String donoDaMochila) {
-        this.cor = cor;
-        this.donoDaMochila = donoDaMochila;
+        this.setCor(cor);
+        this.setDonoDaMochila(donoDaMochila);
         this.pesoNaMochila = 0.0;
     }
 
@@ -21,6 +21,10 @@ public class Mochila {
     }
 
     public void setCor(String cor) {
+        if (cor == null || cor.isEmpty()) {
+            System.out.println("Erro: cor não pode ser vazia.");
+            return;
+        }
         this.cor = cor;
     }
 
@@ -29,6 +33,10 @@ public class Mochila {
     }
 
     public void setDonoDaMochila(String donoDaMochila) {
+        if (donoDaMochila == null || donoDaMochila.isEmpty()) {
+            System.out.println("Erro: dono não pode ser vazio.");
+            return;
+        }
         this.donoDaMochila = donoDaMochila;
     }
 
